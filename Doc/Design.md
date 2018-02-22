@@ -1,4 +1,5 @@
 ## Functional Use Cases: 
+![Flow Diagram](FLow.jpg)
 ### * Importing and Loading Data: 
 #### Components: 
 1. Importing data: 
