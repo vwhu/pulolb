@@ -19,7 +19,7 @@
 	* **Name**: train_model
 	* **What it does**: Imports and loads the data using `import_matlab_data` and `load_matlab_data`. Trains the classification model. 
 	* **Input**: Training discharge data after loading and converting to pandas dataframe with `load_matlab_data`.
-	* **Output**: Model Clasiffier 
+	* **Output**: Model Classifier 
 
 ### * Classification and Prediction:
 #### Components: 
