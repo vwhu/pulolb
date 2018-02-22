@@ -1,5 +1,5 @@
 ## Functional Use Cases: 
-![Flow Diagram](FLow.jpg)
+![Flow Diagram](https://github.com/vwhu/PULOLB/blob/master/Doc/Flow.JPG)
 ### * Importing and Loading Data: 
 #### Components: 
 1. Importing data: 
