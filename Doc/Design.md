@@ -19,7 +19,7 @@
 	* **Name**: train_model
 	* **What it does**: Imports and loads the data using `import_matlab_data` and `load_matlab_data`. Trains the classification model. 
 	* **Input**: Training discharge data after loading and converting to pandas dataframe with `load_matlab_data`.
-	* **Output**: ???
+	* **Output**: Model Classifier 
 
 ### * Classification and Prediction:
 #### Components: 
@@ -42,4 +42,7 @@
 	and does a linear extrapolation to predict when the battery will die. 
 	* **Input**: Percentage as float from `predict_battery_life` and time elasped since the battery has been used as a float. 
 	* **Output**: A matplotlib.pyplot plot of time and battery life. 
+
+![Flow Diagram](https://github.com/vwhu/PULOLB/blob/master/Doc/images/Example_Output_Plot.JPG)
+
 	
