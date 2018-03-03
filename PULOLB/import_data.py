@@ -4,7 +4,9 @@ import pandas as pd
 
 
 def import_matlab_data(filename):
-    """Taking a Matlab file of Arbin data from the CALCE database and imports it into a host of different NumPy arrays"""
+    """Taking a Matlab file of Arbin data from the CALCE database and imports it into a host of different NumPy arrays
+        Filename: Matlab file 
+    """
     
     #Importing the file as a HDF5 dataframe, stored in the form of a dictionary.  
     df = hdf5storage.loadmat(filename)
@@ -12,7 +14,9 @@ def import_matlab_data(filename):
 
 
 def initialize_datasets(filename):
-    """This function initializes the columns of the dataframe. Filename = matlab file"""
+    """This function initializes the columns of the dataframe. 
+        Filename = matlab file
+    """
     
     #Generate the dataframe
     df = import_matlab_data(filename) 
@@ -51,7 +55,9 @@ def initialize_datasets(filename):
     return count, idx, time_sum, datetime_sum, step_sum, cycle_sum, current_sum, voltage_sum, charge_ah_sum, discharge_ah_sum    
 
 def single_pd_matlab_data(filename):
-    """This function generates a dataframe with all the cycles included in the matlab file"""
+    """This function generates a dataframe with all the cycles included in the matlab file.
+        Filename = matlab file
+    """
 
     #Generate the dataframe
     df = import_matlab_data(filename) 
@@ -66,7 +72,7 @@ def single_pd_matlab_data(filename):
             data = i
 
     #Initialize the name of the columns             
-    count, idx, time_sum, datetime_sum, step_sum, cycle_sum, current_sum, voltage_sum, charge_ah_sum, discharge_ah_sum = initialize_datasets(filename, df)
+    count, idx, time_sum, datetime_sum, step_sum, cycle_sum, current_sum, voltage_sum, charge_ah_sum, discharge_ah_sum = initialize_datasets(filename)
     
     #Start the count from the 3rd row of the dataset
     start_ind = idx + 1
