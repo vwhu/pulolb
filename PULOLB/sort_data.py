@@ -32,8 +32,12 @@ def charge_discharge(filename):
     #Add the data into the dictionaries
     for idx in list(cycle_dict.keys()):
         if idx not in charge_dict.keys():
-            charge_dict[idx] = cycle_dict[idx].loc[cycle_dict[idx]['current_amp'] > 0]
-            discharge_dict[idx] = cycle_dict[idx].loc[cycle_dict[idx]['current_amp'] < 0]
+            charge_pred = cycle_dict[idx].loc[cycle_dict[idx]['current_amp'] > 0]
+            disc_pred = cycle_dict[idx].loc[cycle_dict[idx]['current_amp'] < 0]
+            charge_dict[idx] = charge_pred
+            charge_dict[idx] = charge_dict[idx].drop(charge_dict[idx].tail(1).index)
+            discharge_dict[idx] = disc_pred
+            discharge_dict[idx] = discharge_dict[idx].drop(discharge_dict[idx].head(1).index)
         else:
             pass
         
