@@ -3,6 +3,34 @@ import import_data
 import pandas as pd
 filename = 'converted_PL03.mat'
 df = import_data.single_pd_matlab_data(filename)
+
+
+def test_import_matlab_data():
+    
+    df = import_matlab_data('converted_PL03.mat')
+    
+    assert len(df2.keys()) == 2
+
+
+def test_initialize_datasets():
+    
+    count, idx, time_sum, datetime_sum, step_sum, cycle_sum, current_sum, voltage_sum, charge_ah_sum, discharge_ah_sum = initialize_datasets('converted_PL03.mat')
+    
+    assert count == 16
+    assert idx == 2
+    #The other outputs should be NumPy arrays. Test that with an auxiliar array
+    a = np.array([1,1,1]) 
+    
+    assert type(a) == type(time_sum)
+    assert type(time_sum) == type(datetime_sum)
+    assert type(time_sum) == type(step_sum)
+    assert type(time_sum) == type(cycle_sum)
+    assert type(time_sum) == type(current_sum)
+    assert type(time_sum) == type(voltage_sum)
+    assert type(time_sum) == type(charge_ah_sum)
+    assert type(time_sum) == type(discharge_ah_sum)
+    
+
 def test_single_mat_file():
     #File format test
     if filename.endswith('.mat'):
