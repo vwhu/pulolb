@@ -98,12 +98,12 @@ def get_lifetime(dic1,dic2,cap):
     
     # For each curve tested, get the parameters
     for i in range(1,len(F)-1):
-        idx = full_curvesd_short[F[i]].shape[0]
+        idx = dic2[F[i]].shape[0]
         # Capacity remaining
-        capacity = full_curvesd_short[F[i]]['discharge_ah'][full_curvesd_short[F[i]].index[idx-1]] - full_curvesd_short[F[i]]['discharge_ah'][full_curvesd_short[F[i]].index[0]]
+        capacity = dic2[F[i]]['discharge_ah'][dic2[F[i]].index[idx-1]] - dic2[F[i]]['discharge_ah'][dic2[F[i]].index[0]]
         percent = ((capacity)/cap)*100 
         # Usage time
-        time = PL03d_short[C[i]]['time'][PL03d_short[C[i]].index[PL03d_short[C[i]].shape[0]-1]]
+        time = dic1[C[i]]['time'][dic1[C[i]].index[dic1[C[i]].shape[0]-1]]
                                                            
         # Coeff. for linear regression between capacity and time
         coeff = np.polyfit([float(0),time],[float(100),percent],1)
@@ -119,7 +119,7 @@ def get_lifetime(dic1,dic2,cap):
     
     return Percent, Time, Slope, Intercept, Life
 
-def life_plot(time,slope,intercept,percent):
+def life_plot(time,slope,intercept,percent,life):
     """This function calculates the parameters needed to diagnose the battery
     The inputs are the usage time, slope and intercept for regression between time and capacity
     and the actual capacity
@@ -137,7 +137,7 @@ def life_plot(time,slope,intercept,percent):
     plt.scatter(time/(3600*24*7),percent)
     plt.plot(x,y,ls = '--')
     plt.ylim(0, 100)
-    plt.xlim(0, Life[0]/(3600*24*7))
+    plt.xlim(0, life/(3600*24*7))
     plt.title('Life prediction')
     plt.xlabel('Time (weeks)')
     plt.ylabel('Remaining Capacity (%)')
