@@ -17,7 +17,7 @@ def curve_distance(a, b):
     return distance
 
 
- def distance_cycle_to_full(cycle,dic1,dic2):
+def distance_cycle_to_full(cycle,dic1,dic2):
     """This function calculates the time warping distance between a partial curve and full curves 
     Inputs are two dictionaries and a key number to identify the curve
     """
@@ -59,7 +59,7 @@ def curve_distance(a, b):
     
     return df
 
-    def partial_to_full(dic1,dic2):
+def partial_to_full(dic1,dic2):
     """This function relates partial curves to full curves, according to the distances between them
     The inputs are two dictionaries"""
     C = []
@@ -80,7 +80,7 @@ def curve_distance(a, b):
     F = np.array(F)
     return D,C,F
 
-    def get_lifetime(dic1,dic2,cap):
+def get_lifetime(dic1,dic2,cap):
     """This function calculates the parameters needed to diagnose the battery
     The inputs are two dictionaries and the original capacity of the battery tested.
     """
@@ -119,7 +119,7 @@ def curve_distance(a, b):
     
     return Percent, Time, Slope, Intercept, Life
 
-    def life_plot(time,slope,intercept,percent):
+def life_plot(time,slope,intercept,percent):
     """This function calculates the parameters needed to diagnose the battery
     The inputs are the usage time, slope and intercept for regression between time and capacity
     and the actual capacity
