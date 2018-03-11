@@ -1,36 +1,34 @@
 import sort_data
 import import_data
 import pandas as pd
+import numpy as np
 filename = 'converted_PL03.mat'
 df = import_data.single_pd_matlab_data(filename)
 
-
 def test_import_matlab_data():
+    df = import_data.import_matlab_data('converted_PL03.mat')
     
-    df = import_matlab_data('converted_PL03.mat')
-    
-    assert len(df2.keys()) == 2
+    assert len(df.keys()) == 2, 'There should be only two keys in the dict from the mat file import'
 
 
 def test_initialize_datasets():
     
-    count, idx, time_sum, datetime_sum, step_sum, cycle_sum, current_sum, voltage_sum, charge_ah_sum, discharge_ah_sum = initialize_datasets('converted_PL03.mat')
+    count, idx, time_sum, datetime_sum, step_sum, cycle_sum, current_sum, voltage_sum, charge_ah_sum, discharge_ah_sum = import_data.initialize_datasets('converted_PL03.mat')
     
     assert count == 16
     assert idx == 2
     #The other outputs should be NumPy arrays. Test that with an auxiliar array
     a = np.array([1,1,1]) 
     
-    assert type(a) == type(time_sum)
-    assert type(time_sum) == type(datetime_sum)
-    assert type(time_sum) == type(step_sum)
-    assert type(time_sum) == type(cycle_sum)
-    assert type(time_sum) == type(current_sum)
-    assert type(time_sum) == type(voltage_sum)
-    assert type(time_sum) == type(charge_ah_sum)
-    assert type(time_sum) == type(discharge_ah_sum)
+    assert type(a) == type(time_sum), 'Data type of time_sum should be a numpy array'
+    assert type(time_sum) == type(datetime_sum), 'Data type of datetime_sum should be a numpy array'
+    assert type(time_sum) == type(step_sum),'Data type of step_sum should be a numpy array'
+    assert type(time_sum) == type(cycle_sum), 'Data type of cycle_sum should be a numpy array'
+    assert type(time_sum) == type(current_sum), 'Data type of current_sum should be a numpy array'
+    assert type(time_sum) == type(voltage_sum), 'Data type of voltage_sum should be a numpy array'
+    assert type(time_sum) == type(charge_ah_sum), 'Data type of charge_ah_sum should be a numpy array'
+    assert type(time_sum) == type(discharge_ah_sum), 'Data type of discharge_ah_sum should be a numpy array'
     
-
 def test_single_mat_file():
     #File format test
     if filename.endswith('.mat'):
