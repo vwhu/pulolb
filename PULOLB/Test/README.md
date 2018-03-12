@@ -1,7 +1,7 @@
 ## Unit tests for Cleaning Data packages
 
 This unit tests are for the modules``import_data``, ``sort_data``, and ``predict_capacity``. 
-Including here are the tests for every function in each module:
+Including here are the tests for functions in each module:
 
 ### Functions tested in ``import_data`` module:
 
