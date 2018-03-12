@@ -31,5 +31,13 @@ Contains tutorials and demonstrations to use the tool.
 2. Import the packages 
 
 ### RUNNING NOSETESTS TO CHECK THE UNITS OF THE CODE
+```
+MacBook:seds-hw3-Rossana139 martinscavone$ nosetests
+...
+----------------------------------------------------------------------
+Ran 9 tests in 209.989s
+
+OK
+```
 
 ### ACKNOWLEDGEMENTS
