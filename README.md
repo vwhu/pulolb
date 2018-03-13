@@ -4,7 +4,7 @@ The tool takes in the discharge or charge curve of the current cycle of your bat
 
 ### SOFTWARE DEPENDENCIES
 * Python Version 3.6
-* Packages used: fastdtw, h5py, hdf5storage, matplotlib, numpy, pandas, scipy
+* Packages used: fastdtw, h5py, hdf5storage, matplotlib, numpy, pandas, scipy, tqdm
 
 ### PACKAGES INCLUDED IN THE TOOL
 * `import_data` is a tool used to take in the input data, and converts the file to be compatible with the tool. 
