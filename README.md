@@ -3,8 +3,8 @@ PULOLB (/po͝olläb/) is a tool that can determine the remaining lifetime of you
 The tool takes in the discharge or charge curve of the current cycle of your battery, whether you partially charge and discharge it and determines the cycle and the capacity of the battery. It finally determines the percentage lifetime of your battery, based on the capacity. 
 
 ### SOFTWARE DEPENDENCIES
-* Python Version 3.x
-* Packages used: dtaidistance, scikit-learn
+* Python Version 3.6
+* Packages used: fastdtw, h5py, hdf5storage, matplotlib, numpy, pandas, scipy
 
 ### PACKAGES INCLUDED IN THE TOOL
 * `import_data` is a tool used to take in the input data, and converts the file to be compatible with the tool. 
@@ -42,7 +42,7 @@ OK
 
 ### ACKNOWLEDGEMENTS
 
-We would like to thank Professor David Beck and the group of TA's in the DIRECT program for all the suggestions regarding the development of this software.
+We would like to thank Professor David Beck and the group of teaching assistants in the DIRECT program for all the help and guidance regarding the development of this software.
 
 We would also like to thank The Center for Advanced Life Cycle Engineering (CALCE) from the University of Maryland for providing the data in an open-source platform, the University of Washington for their continued support, and the Clean Energy Institute for making the DIRECT program possible.
 
