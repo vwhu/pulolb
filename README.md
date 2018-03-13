@@ -32,7 +32,7 @@ Contains tutorials and demonstrations to use the tool.
 
 ### RUNNING NOSETESTS TO CHECK THE UNITS OF THE CODE
 ```
-MacBook:seds-hw3-Rossana139 martinscavone$ nosetests
+MacBook: martinscavone$ nosetests
 ...
 ----------------------------------------------------------------------
 Ran 9 tests in 209.989s
