@@ -41,3 +41,8 @@ OK
 ```
 
 ### ACKNOWLEDGEMENTS
+
+We would like to thank Professor David Beck and the group of TA's in the DIRECT program for all the suggestions regarding the development of this software.
+
+We would also like to thank The Center for Advanced Life Cycle Engineering (CALCE) from the University of Maryland for providing the data in an open-source platform, the University of Washington for their continued support, and the Clean Energy Institute for making the DIRECT program possible.
+
