@@ -13,7 +13,7 @@ The main function in this package is called ``single_pd_matlab_data``, that gene
 This package generates two dictionaries, one for the charge cycles data and the other for the discharge cycles data..
 
 
-## Battery Life Prediction Module- Documentation
+### 3.  The "predict_capacity.py" package
 
 This module is used for predicting the remaining life of lithium batteries. 
 
