@@ -12,18 +12,19 @@ The tool takes in the discharge or charge curve of the current cycle of your bat
 * `predict_capacity` which gives a prediction of the battery's remaining lifetime. 
 
 ### FOLDERS IN THE REPOSITORY
-* **Pulolb**
+* **pulolb**
 Contains the .py files  
 	* data - Data used for the training and testing as .mat files. 
 	* Test - For unit testing. 
-* **Development_in_Notebooks**	
+* **development_in_notebooks**	
 Contains all the software development in jupyter notebooks.
-* **Documentation** 
+* **documentation** 
 Contains files with information for the use cases, tech reviews and images used in the documentation. 
 	* Design.md
 	* Tech_Review_222018.pptx
 	* DIRECT_PULOLB_Poster.pptx
-* **Tutorials**
+	* DIRECT_PULOLB_Poster.pdf
+* **tutorials**
 Contains tutorials and demonstrations to use the tool. 
 
 ### SETUP
@@ -44,5 +45,5 @@ OK
 
 We would like to thank Professor David Beck and the group of teaching assistants in the DIRECT program for all the help and guidance regarding the development of this software.
 
-We would also like to thank The Center for Advanced Life Cycle Engineering (CALCE) from the University of Maryland for providing the data in an open-source platform, the University of Washington for their continued support, and the Clean Energy Institute for making the DIRECT program possible.
+We would also like to thank the Center for Advanced Life Cycle Engineering (CALCE) from the University of Maryland for providing the data in an open-source platform, the University of Washington for their continued support, and the Clean Energy Institute for making the DIRECT program possible.
 
